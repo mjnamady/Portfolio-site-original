@@ -233,7 +233,7 @@ section > h2 {
 }
 .aboutMe {
     grid-column: span 3;
-    padding-left: 50px;
+    padding: 0 30px 0 50px;
 }
 
 .aboutMe h2 {
@@ -636,6 +636,13 @@ section > h2 {
     grid-column: 1 / span 5;
 }
 
+  }
+
+  /* Mobile */
+@media (max-width: 500px) {
+    .main-banner {
+        height: 80vh;
+    }
   }
 
 
