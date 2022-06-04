@@ -566,10 +566,11 @@ section > h2 {
     }
 /* BANNER SECTION */
     .main-banner {
-        height: 60vh;
+        height: calc(100vh - 70px);
     }
 
     .banner-infor {
+        width: 100%;
         animation: slideInFromTop 1.5s ease-in;
         margin: 0 auto;
     }
