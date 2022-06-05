@@ -305,7 +305,6 @@ section > h2 {
     position: relative;
     width: 100%;
     height: 300px; 
-    /* background-color: var(--dark-color); */
     background-image: url('../imgs/pexels-faizur-rehman-10050661.jpg');
     background-size: contain;
     background-position: center;
@@ -599,7 +598,7 @@ section > h2 {
 /* ABOUT ME SECTION */
 .main-about_me  {
     margin: 90px auto 0;
-    width: 100%;
+    width:90%;
     padding: 20px 5px;
 }
 
