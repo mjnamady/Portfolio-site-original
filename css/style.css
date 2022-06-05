@@ -122,7 +122,8 @@ section > h2 {
     color: var(--secondary-color);
 }
 
-.main-nav .flex {
+.main-nav .flex 
+{
     height: 70px;
     justify-content: space-between;
     align-items: center;
@@ -158,7 +159,6 @@ section > h2 {
     height: 330px;
     background-color: var(--primary-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
-    /* position: relative; */
     margin-top: 70px;
 }
 
@@ -173,6 +173,8 @@ section > h2 {
 }
 
 .banner-infor h2 {
+    color: var(--dark-color);
+    font-weight: 600;
     line-height: 44px;
 }
 
@@ -330,7 +332,6 @@ section > h2 {
 }
 
 /* TECHNOLOGIES SECTION */
-
 .main-technologies .flex {
     flex-flow: row wrap;
     justify-content: center;
@@ -342,7 +343,6 @@ section > h2 {
   }
 
   .main-technologies .container {
-    /* width: 1000px; */
     overflow: hidden;
   }
 
@@ -367,7 +367,7 @@ section > h2 {
     margin: 0 auto;
 }
 
-/* CONTACTME SECTION  */
+/* CONTACT ME SECTION  */
 .main-contact {
     height: 450px;
     margin-top: 30px;
@@ -563,6 +563,7 @@ section > h2 {
     .main-contact .grid {
         grid-template-columns: 1fr;
     }
+
 /* BANNER SECTION */
     .main-banner {
         height: 550px;
@@ -691,7 +692,6 @@ section > h2 {
 }
 
 /* PROJECTS SECTION*/
-
 .main-projects .wrapper .card {
     width: 150px;
     height: 150px;
