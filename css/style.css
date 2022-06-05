@@ -654,6 +654,22 @@ section > h2 {
     margin: 75px auto 0;
 }
 
+.aboutMe {
+    text-align:justify;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.aboutMe h2 {
+    text-align: center;
+}
+
+.aboutMe .btn {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
 /* SERVICES */
 
 .main-services .container {
