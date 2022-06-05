@@ -91,7 +91,7 @@ section > h2 {
     display: grid;
 }
 
-  /* nav-bar */
+  /* NAV-BAR */
 .main-nav {
     position: fixed;
     top: 0;
@@ -132,7 +132,7 @@ section > h2 {
 .main-nav .container ul {
     display: inline-flex;
 }
-
+.nav-mobile ul li a,
 .main-nav .container ul li a {
     display: block;
     padding: 10px;
@@ -140,10 +140,88 @@ section > h2 {
     cursor: pointer;
     transition: 0.4s;
 }
-
+.nav-mobile ul li a:hover,
 .main-nav .container ul li a:hover {
     color: var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
+}
+
+/* HANDBURGER SECTION */
+.hanburger {
+    display: none;
+    position: relative;
+    z-index: 1;
+
+    user-select: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+.hanburger span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background-color: var(--secondary-color);
+    border-radius: 6px;
+    z-index: 1;
+
+    transform-origin: 0 0;
+
+    transition: 0.4s;
+}
+
+.hanburger:hover span:nth-child(2) {
+    transform: translateX(10px);
+    background-color: var(--dark-color);
+}
+
+.hanburger.is-active span:nth-child(1){
+    transform: translate(0px, -2px) rotate(45deg);
+}
+
+.hanburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hanburger.is-active span:nth-child(3){
+    transform: translate(-3px, 3px) rotate(-45deg);
+}
+
+.hanburger.is-active:hover span {
+    background-color: var(--dark-color);
+}
+
+/* MOBILE MENU SECTION */
+.nav-mobile { 
+    display: none;  
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding: 20px;
+    border-radius: 0px 0px 0px 50px;
+    opacity: 1;
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 1px solid var(--secondary-color);
+}
+
+.nav-mobile ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.nav-mobile ul li {
+    margin: 0 auto;
+    width: 40%;
 }
 
 /* BANNER SECTION */
@@ -562,6 +640,14 @@ section > h2 {
     .main-about_me .grid,
     .main-contact .grid {
         grid-template-columns: 1fr;
+    }
+    /* Mobile nav */
+    .hanburger {
+        display: block;
+    }
+
+    .main-nav .container ul {
+        display: none;
     }
 
 /* BANNER SECTION */
