@@ -448,7 +448,6 @@ section > h2 {
 }
 
 /* FOOTER SECTION  */
-
 .footer {
     width: 100%;
     background-color: var(--dark-color);
@@ -510,6 +509,7 @@ section > h2 {
     text-align: center;
     margin: 0 auto;
     justify-self: center;
+    color: var(--secondary-color);
 }
 
 /* Animations */
@@ -684,7 +684,7 @@ section > h2 {
 
 /* CONTACT ME SECTION */
 .main-contact {
-    height: 450px;
+    height: 670px;
     margin-top: 30px;
 }
 
@@ -700,6 +700,10 @@ section > h2 {
     width: 300px;
 }
 
+/* FOOTER SECTION  */
+.footer .footer-right-side {
+    display: none;
+}
   }
 
 
