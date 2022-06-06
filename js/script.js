@@ -9,5 +9,10 @@ $(document).ready(function(){
         $(".hanburger").toggleClass('is-active');
         $(".nav-mobile").slideToggle(1000);
     });
+
+    $(".nav-mobile ul li").click(function(){
+        $(".nav-mobile").slideToggle(500);
+        $(".hanburger").toggleClass('is-active');
+    });
     
 });
