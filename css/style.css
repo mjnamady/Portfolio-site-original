@@ -77,6 +77,7 @@ section > h2 {
     text-align: center;
     color: var(--secondary-color);
     margin: 30px 0;
+    font-weight: 500;
 }
 
 #focused {
@@ -319,6 +320,7 @@ section > h2 {
 }
 
 .aboutMe h2 {
+    font-weight: 600;
     color: var(--secondary-color);
 }
 
@@ -691,9 +693,11 @@ section > h2 {
 }
 
 .main-about_me .container .img-me {
+    order: 2;
     background-position: center;
-    height: 250px;
-    border-radius: 100%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .aboutMe {
