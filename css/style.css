@@ -1,3 +1,4 @@
+
 /* Utilities */
 :root {
     --primary-color: #FDF7F7;
@@ -268,17 +269,20 @@ section > h2 {
     overflow: hidden;
 }
 
-.social-icons {
-    padding-top:25px;
+.social-icons i {
+    padding: 10px;
+    color: var(--dark-color)
 }
+
 
 .social-icons > img {
     width: 40px;
 }
 
+.social-icons i:hover,
 .social-icons > img:hover {
     transform: scale(0.90);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 3px 10px #00000033; */
 }
 
 .banner-img img {
@@ -460,12 +464,15 @@ section > h2 {
 }
 
 .main-contact .contact-infor {
-    align-self: center;
+    grid-column: 1 / span 3;
+    /* align-self: center; */
     justify-self: center;
+    padding-top: 100px;
     animation: slideInFromLeft 1.5s ease-in;
 }
 
 .main-contact .container .contact-infor h2 {
+    text-align: center;
     font-size: 40px;
     font-weight: 600;
     line-height: 60px;
@@ -483,7 +490,7 @@ section > h2 {
 .main-contact .contact-form {
     width: 400px;
     justify-self: flex-end;
-    grid-column: 3 / span 5;
+    grid-column: 4 / span 5;
     animation: slideInFromRight 1.5s ease-in;
 }
 
@@ -536,7 +543,7 @@ section > h2 {
 }
 
 .footer .grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .footer .footer-left-side h2 {
@@ -555,38 +562,43 @@ section > h2 {
     padding-top: 10px;
 }
 
-.footer .footer-left-side div img {
+.footer .footer-left-side div i {
     width: 40px;
     height: 40px;
     margin: auto 10px auto 0;
 }
 
-.footer .footer-right-side {
-    color: var(--primary-color);
-    justify-self: flex-end;
-    padding-right: 40px;
-}
+.footer .footer-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
 
-.footer .footer-right-side ul {
-    text-align: right;
-}
-
-.footer .footer-right-side ul li {
+.footer .footer-center ul li {
     margin-top: 10px;
 }
 
-.footer .footer-right-side ul > li > a {
+.footer .footer-center ul > li > a {
     color: var(--primary-color);
 }
 
-.footer .footer-right-side ul > li > a:hover {
+.footer .footer-center ul > li > a:hover {
     color: var(--secondary-color);
     border-bottom: 1px solid var(--secondary-color);
+}
+
+.footer .footer-right-side {
+    color: var(--primary-color);
+    justify-self: center;
+    align-self: center;
+    padding-right: 40px;
 }
 
 .footer #copyright {
     width: fit-content;
     text-align: center;
+    padding: 10px;
+    font-size: 18px;
     margin: 0 auto;
     justify-self: center;
     color: var(--secondary-color);
@@ -720,6 +732,7 @@ section > h2 {
 
 .main-contact .contact-infor {
     animation: slideInFromLeft 1.5s ease-in;
+    padding-top: 0px;
 }
 
 .main-contact .container .contact-infor h2 {
@@ -796,6 +809,7 @@ section > h2 {
 
 .main-contact .contact-infor {
     width: 100%;
+    padding-top: 0px;
 }
 
 .main-contact .container .contact-infor h2 {
@@ -810,6 +824,10 @@ section > h2 {
 .footer .footer-right-side {
     display: none;
 }
+
+.footer .footer-center {
+    display: none;
+} 
   }
 
 
