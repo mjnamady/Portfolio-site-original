@@ -33,7 +33,37 @@ body {
     padding: 20px;
     margin: 10px;
     transition: 0.4s;
+    position: relative;
   }
+
+  .card .overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    z-index: 100;
+    visibility: hidden;
+  }
+
+  .card:hover .overlay {
+    visibility: visible;
+    transition: 0.9s;
+  }
+
+  .card .overlay a {
+    color: var(--light-color)
+  }
+
+  .card .overlay a:hover {
+    color: var(--secondary-color)
+  }
+
   
   .btn {
     display: inline-block;
@@ -78,7 +108,7 @@ section > h2 {
     text-align: center;
     color: var(--secondary-color);
     margin: 30px 0;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #focused {
@@ -259,7 +289,7 @@ section > h2 {
 }
 
 .banner-infor p {
-    line-height: 24px;
+    line-height: 30px;
     color: var(--dark-color);
 }
 
