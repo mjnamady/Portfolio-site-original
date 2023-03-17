@@ -137,6 +137,10 @@ section > h2 {
     /* margin-bottom: 50px; */
 }
 
+.main-nav a span:hover {
+    color: var(--dark-color);
+}
+
 .main-nav .brand,
 .footer .footer-left-side h2
 {
@@ -183,7 +187,6 @@ section > h2 {
     display: none;
     position: relative;
     z-index: 1;
-
     user-select: none;
     appearance: none;
     border: none;
@@ -259,43 +262,71 @@ section > h2 {
 /* BANNER SECTION */
 .main-banner .grid {
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    align-items: center;
+    align-items: top;
     justify-content: center;
 }
 
 .main-banner {
+    position: relative;
     display: block;
     width: 100%;
     height: 330px;
-    background-color: var(--primary-color);
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
     margin-top: 70px;
+    background-image: url('/imgs/Banner_img.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-banner .overlay {
+    background-color: rgba(253, 247, 247, 0.8);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
 }
 
 .banner-infor {
-    width: 500px;
+    width: 600px;
     grid-column: 1 / span 2;
     animation: slideInFromLeft 2s ease-in;
+    z-index: 100;
+    margin-top: 40px;
 }
 
-.banner-infor h2 span {
+.banner-infor h2 span,
+.wd-banner-infor h2 span,
+.ui-ux-banner-infor h2 span,
+.gd-banner-infor h2 span,
+.anime-banner-infor h2 span,
+.ve-banner-infor h2 span {
     color: var(--secondary-color);
+    text-shadow: 3px 6px 10px var(--secondary-color);
 }
 
-.banner-infor h2 {
+.banner-infor h2,
+.wd-banner-infor h2,
+.ui-ux-banner-infor h2,
+.gd-banner-infor h2,
+.anime-banner-infor h2,
+.ve-banner-infor h2 {
     color: var(--dark-color);
     font-weight: 600;
     line-height: 44px;
+    text-shadow: 3px 6px 10px var(--dark-color);
 }
 
 .banner-infor p {
-    line-height: 30px;
+    line-height: 40px;
     color: var(--dark-color);
+    text-shadow: 3px 6px 10px var(--dark-color);
 }
 
 .banner-img {
     width: 300px;
     overflow: hidden;
+    z-index: 100;
 }
 
 .social-icons i {
@@ -436,6 +467,12 @@ section > h2 {
     scroll-padding: 30px;
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
   }
+
+  .wd-project-sample .container-p {
+    background: none;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
   .container-p .card {
     display: flex;
     flex: 0 0 25%;
@@ -474,46 +511,7 @@ section > h2 {
     color: var(--dark-color);;
     text-align: center;
   }
-  /* style ends here */
-
-/* .main-projects {
-    width: 100%;
-}
-
-.main-projects .flex {
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.main-projects .wrapper {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 300px; 
-    background-image: url('../imgs/pexels-faizur-rehman-10050661.jpg');
-    background-size: contain;
-    background-position: center;
-    padding: 0px;
-}
-
-.main-projects .wrapper .card {
-    width: 200px;
-    height: 200px;
-}
-
-.main-projects .wrapper .transparent-layer {
-    width: 100%;
-    height: 100%;
-    background-color: var(--dark-color);
-    opacity: .6;
-    position: absolute;
-    z-index: 80;
-}
-
-.main-projects .wrapper div {
-    z-index: 100;
-} */
+  
 
 /* TECHNOLOGIES SECTION */
 .main-technologies .flex {
@@ -633,6 +631,128 @@ section > h2 {
     margin: 0 auto;
 }
 
+/* SUB-PAGES-STYLE */
+
+/* HERO SECTION */
+.wd-main-banner,
+.ui-ux-main-banner,
+.gd-main-banner,
+.anime-main-banner,
+.ve-main-banner {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;
+    background-image: url('../imgs/Web_Development.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.ui-ux-main-banner {
+    background-image: url('../imgs/UIUX_Design.jpeg');
+}
+
+.gd-main-banner {
+    background-image: url('../imgs/Graphics_Design.jpeg');
+}
+
+.anime-main-banner {
+    background-image: url('../imgs/WhatsApp\ Image\ 2023-03-17\ at\ 7.46.22\ AM.jpeg');
+}
+
+.ve-main-banner {
+    background-image: url('../imgs/Video_Editing.jpeg');
+}
+
+
+.wd-banner-infor,
+.ui-ux-banner-infor,
+.gd-banner-infor,
+.anime-banner-infor,
+.ve-banner-infor {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+}
+
+.wd-banner-infor h2,
+.ui-ux-banner-infor h2,
+.gd-banner-infor h2,
+.anime-banner-infor h2,
+.ve-banner-infor h2 {
+    color: var(--light-color);
+   align-self: center;
+   text-shadow: 3px 6px 10px var(--light-color);
+}
+
+.wd-main-banner .overlay,
+.ui-ux-main-banner .overlay,
+.gd-main-banner .overlay,
+.anime-main-banner .overlay,
+.ve-main-banner .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(73, 47, 47, 0.6);
+    z-index: 100;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.grid-3 .card {
+    padding: 0;
+    border: 4px solid var(--secondary-color);
+}
+
+.grid-3 .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.grid-3 .card .overlay{
+    color: var(--light-color)
+}
+
+.animation-project-sample .grid-2 {
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+.animation-project-sample .video{
+    border-bottom: 1px solid var(--dark-color);
+}
+
+.animation-project-sample .video iframe{
+    width: 100%;
+    border: 3px solid var(--secondary-color);
+}
+
+.animation-project-sample .video h3{
+    font-size: 24px;
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.animation-project-sample .video p{
+    font-size: 16px;
+    text-align: center;
+    color: var(--dark-color);
+}
+
 /* FOOTER SECTION  */
 .footer {
     width: 100%;
@@ -705,6 +825,10 @@ section > h2 {
     margin: 0 auto;
     justify-self: center;
     color: var(--secondary-color);
+}
+
+.Whatsapp-chat {
+    position: absolute;
 }
 
 /* Animations */
@@ -851,6 +975,14 @@ section > h2 {
     flex: 0 0 50%;
   }
 
+  .grid-3 {
+    grid-template-columns: 1fr;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr;
+}
+
   }
 
   /* Mobile */
@@ -939,6 +1071,17 @@ section > h2 {
 .container-p .card {
     flex: 0 0 100%;
   }
+
+  .wd-banner-infor,
+  .ui-ux-banner-infor,
+  .gd-banner-infor {
+    width: 100%;
+    text-align: center;
+}
+
+.wd-banner-infor h2 {
+   align-self: center;
+}
   }
 
 

@@ -7,11 +7,11 @@
 $(document).ready(function(){
     $('.hanburger').click(function(){
         $(".hanburger").toggleClass('is-active');
-        $(".nav-mobile").slideToggle(400);
+        $(".nav-mobile").slideToggle(500);
     });
 
     $(".nav-mobile ul li").click(function(){
-        $(".nav-mobile").slideToggle(300);
+        $(".nav-mobile").slideToggle(500);
         $(".hanburger").toggleClass('is-active');
     });
     
